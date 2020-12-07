@@ -1,0 +1,77 @@
+{% extends 'base.html' %} 
+
+
+{%  load static %}
+
+{% block title %} - About Us {% endblock %}
+
+
+{% block content %}
+
+<section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">About Us</h1>
+          <p class="lead">Our aim is to help professionals across the 
+            globe obtain the technical skills they need to strike through excellence in today’s digital market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{%  url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> About</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>We Search For The Perfect Project</h2>
+          <img src="{% static 'img/soft.jpg' %} " alt="">
+          <p class="mt-4">Our content and resources are freely available
+             and we prefer to keep it that way to encourage our readers acquire as many skills as they would like to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="bg-dark text-white text-center">
+    <h2 class="display-4">We Work For You</h2>
+    <h4>Our mission is to help users learn Software Development more easily.</h4>
+    <hr>
+    <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Our Team</h2>
+      <div class="row text-center">
+          <div class="col-md-4">
+            <img src="{% static 'img/founder/Bhavesh.jpg' %} "  style="height: 300px;" alt="" class="rounded-circle mb-3">
+            <h4>Bhavesh soni</h4>
+            <hr>
+            <p>
+              <i class="fas fa-phone"></i>6376721685</p>
+            <p>
+              <i class="fas fa-envelope-open"></i>bhaveshrocksoni@gamil.com</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

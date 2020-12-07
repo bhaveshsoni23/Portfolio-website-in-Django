@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% load humanize %}
+{% block title %} |  {% endblock %}
+
+{% block content %}
+
+<section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">MaskDetect</h1>
+          <p class="lead">Python</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'listings' %}">Project</a>
+          </li>
+          <li class="breadcrumb-item active">MaskDetect</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+   <!-- Alerts -->
+   {% include 'partials/alerts.html' %}
+  <!-- Listing -->
+  <section id="listing" class="py-4">
+    <div class="container">
+      <a href="{% url 'listings' %}" class="btn btn-light mb-4">Back To Listings</a>
+      <div class="row">
+        <div class="col-md-9">
+          
+          <img src="{% static 'img/MaskDetect/maskdetect.png' %}" alt=""  class="img-main img-fluid mb-3">
+          
+          <div class="row mb-5 thumbs">
+            
+            <div class="col-md-2">
+              <a href="{% static 'img/facedetect/capture.png' %}" data-lightbox="home-images">
+                <img src="{% static 'img/facedetect/capture.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+            
+            <div class="col-md-2">
+              <a href="{% static 'img/facedetect/Detection.png' %}" data-lightbox="home-images">
+                <img src="{% static 'img/facedetect/Detection.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+           
+            <div class="col-md-2">
+              <a href="{% static 'img/facedetect/layout.png' %}" data-lightbox="home-images">
+                <img src="{% static 'img/facedetect/layout.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+{% endblock %}
